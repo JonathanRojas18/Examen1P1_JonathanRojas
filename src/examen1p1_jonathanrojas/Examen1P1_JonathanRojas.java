@@ -12,20 +12,23 @@ public class Examen1P1_JonathanRojas {
             switch(menu()){
                 case 1:
                     System.out.println("Ingrese el valor de N(entero positivo): ");
-                    double n=leer.nextInt();
-                    num=1;
+                    int n=leer.nextInt();
                     while(n<=0){
                         System.out.println(" El numero debe ser mayor que 0 :");
                         System.out.println("Ingrese el valor de N(entero positivo): ");
                         n=leer.nextInt();
                     }// Fin del While
-                    System.out.println(" La suma total S es :" +calcularsuma(num));
+                    System.out.println(" La suma total S es :" +calcularsuma(n));
                     break;
                 case 2: 
                     System.out.println("Ingrese num1: ");
                     int n1=leer.nextInt();
                     System.out.println("Ingrese num2: ");
                     int n2=leer.nextInt();
+                    
+                    System.out.println(" El minimo comun Multiplo de"+n1+" y "+n2+"es :");
+                    
+                    System.out.println("");
                     break;
                 case 3:
                     break;
@@ -48,17 +51,21 @@ public class Examen1P1_JonathanRojas {
     }// Fin del menu 
     public static double calcularsuma(int n){
         double resultado=0;
-        double formula;
-        for(int i=1;i<=0;i++){
-             formula =(3*(i*i)+2)/Math.pow(2,i);
+        for(int i=1;i<=n;i++){
+             double formula =(3*(i*i)+2)/Math.pow(2,i);
+             resultado=resultado+formula;
+             System.out.println("Iteracion: "+i+ " Termino = "+formula+" Suma Parcial ="+resultado);
         }
-        resultado+=formula;
         return resultado;
     }//Fin del primer ejercicio
-    public static double MCM(int n){
+    public static int MCM(int n1, int n2){
         int resultado=0;
         return resultado;
     }// Fin del Segundo ejercicio
+    
+    public static int MCD(int n1, int n2){
+        return n1;
+    }
     public static void cifrado(){
     }
 }
